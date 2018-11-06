@@ -1,0 +1,213 @@
+@import '~bootstrap/scss/bootstrap';
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+
+.row.content {
+    height: 1200px
+}
+
+
+/* Set gray background color and 100% height */
+
+.sidenav {
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+.login-overlay {
+    @extend .alert;
+    @extend .alert-info;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 7px;
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.2s;
+
+    &.visible {
+        transition: all 0.5s;
+
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    .row.content {
+        height: auto;
+    }
+}
+
+.header-nav {
+    .navbar-text {
+        margin-right: 10px;
+    }
+}
+
+.bg-holder {
+    width: 100%;
+    height: 2000px;
+    background-size: 100%;
+    background: url(indexBG.jpg);
+}
+
+.header {
+    font-size: 110px;
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: 5px 5px 10px black;
+    margin-right: 30%;
+    margin-left: 30%;
+    color: white;
+    height: 100%;
+}
+
+.orange {
+    color: orange;
+}
+
+
+h1 {
+    font-weight: 300;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.registerImage {
+    background: url('./402H.jpg');
+}
+
+.spinner {
+    background: url(square.svg);
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+}
+
+.edit-pencil {
+    background: url('./pencil.svg');
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+}
+
+.door {
+    background: url('./door.svg');
+    fill: white;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+}
+
+.journal-list {
+    margin-top: 10px;
+}
+
+.row-margin .row {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.entry-list {
+    width: 100%;
+
+    .name {
+        width: 25%;
+    }
+    td.name {
+        color: #00abff;
+        font-weight: bold;
+
+        &.hidden {
+            font-style: italic;
+            color: #73bce0;
+        }
+
+        cursor: pointer;
+    }
+
+    .description {
+        width: 45%;
+        cursor: pointer;
+    }
+
+    .edited {
+        width: 15%;
+        cursor: pointer;
+    }
+
+    .actions {
+        width: 15%;
+    }
+}
+
+.flex-inline {
+    display: inline-flex;
+}
+
+.vam {
+    vertical-align: middle;
+}
+
+.sidenav .list-group .list-group-item {
+    padding: 10px;
+}
+
+.sidenav-header {
+    font-size: 1.1rem;
+    font-weight: 500;    
+}
+
+.sidenav-date {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.sidenav button {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+pre { 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.rev-header {
+    @extend .alert;
+    @extend .alert-secondary;
+    font-weight: 500;
+}
+
+.rev-body {
+    padding-left: 20px;
+
+    overflow: hidden;
+    max-height: 0px;
+
+    &.opened {
+        max-height: 100000px;
+    }
+}
